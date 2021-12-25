@@ -1,0 +1,2 @@
+class PirateRadioError(Exception):
+    pass
