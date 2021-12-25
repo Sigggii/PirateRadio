@@ -22,10 +22,10 @@ class PirateRadio(discord.Client):
             await write_command_error(message, str(err))
 
 
-
-
-
 if __name__ == '__main__':
-    load_dotenv('.env')
+    try:
+        load_dotenv('.env')
+    except Exception:
+        pass
     client: discord.Client = PirateRadio()
     client.run(os.getenv('bot-token'))
